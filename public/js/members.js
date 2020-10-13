@@ -5,9 +5,9 @@ $(document).ready(() => {
     $(".member-name").text(data.firstName);
   });
 
-  $("#log-out").on("click", function(){
-    window.location.replace("/login")
-  })
+  // $("#log-out").on("click", function(){
+  //   window.location.replace("/login")
+  // })
 });
 
 
