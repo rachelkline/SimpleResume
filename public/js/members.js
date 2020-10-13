@@ -5,9 +5,16 @@ $(document).ready(() => {
     $(".member-name").text(data.firstName);
   });
 
-  // $("#log-out").on("click", function(){
-  //   window.location.replace("/login")
-  // })
+  $("#addUserinfo").hide();
+  $("#editBtn").on("click", function() {
+      $("#userinfo").hide();
+      $("#addUserinfo").show();
+  });
+
+  $("#finishBtn").on("click", function() {
+    $("#addUserinfo").hide();
+    $("#userinfo").show();
+  })
 });
 
 
