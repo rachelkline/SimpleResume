@@ -28,3 +28,6 @@ body{
   background-image: url("../images/shattered.png");
   }
 
+  .button-opacity{
+    opacity: 0.5;
+  }

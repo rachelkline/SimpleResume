@@ -1,38 +1,59 @@
 <div class="card-panel hoverable">
     <div class="card-content">
         <span class="card-title">My Information:</span>
-        
         <p>Job Title:</p>
+
         <div class="input-field">
-            
+
             <input id="job-title" type="text" class="validate">
-            <label for="job-title">Edit Job Title:</label> 
-       </div>  
+            <label for="job-title">Edit Job Title:</label>
+            <a class="button-opacity btn tooltipped red" data-position="left"
+                data-tooltip="TIP: What profession are you seeking?">?</a>
+            <a class=" button-opacity btn tooltipped" data-position="right" data-tooltip="'Junior Software Developer'">EXAMPLE</a>
+        </div>
+
+        <p>Professional Summary:</p>
+        <div class="input-field">
+            <input id="prof-summary" type="text" class="validate">
+            <label for="prof-summary">Edit Professional Summary:</label>
+            <a class="button-opacity btn tooltipped red" data-position="left"
+                data-tooltip="TIP: Sum up your top skills, experiences, and achievements as they pertain to a job opening.">?</a>
+            <a class="button-opacity btn tooltipped" data-position="right"
+                data-tooltip="'Hard-working customer service agent with 7+ years of experience and solid telesales skills. Seeking improve customer retention at F.L.T. Maddox.'">EXAMPLE</a>
+        </div>
+
         <p>Education:</p>
         <div class="input-field">
             <input id="education-input" type="text" class="validate">
             <label for="education">Edit Education:</label>
-        </div>
-
-        <p>Job History:</p>
-        <div class="input-field">
-            <input id="job-history" type="text" class="validate">
-            <label for="job-history">Edit Job History:</label>
+            <a class="button-opacity btn tooltipped red" data-position="left"
+                data-tooltip="TIP: Name the institution you attended and the certification you recieved there.">?</a>
+            <a class="button-opacity btn tooltipped" data-position="right"
+                data-tooltip="'UNIVERSITY OF PENNSYLVANIA | Bachelor's Degree in Communication Studies'">EXAMPLE</a>
         </div>
 
         <p>Relevant Skills:</p>
         <div class="input-field">
-            <input id="relevant-skills" type="text" class="validate">
-            <label for="education">Edit Relevant Skills:</label>
+            <input id="relevant-skill1" type="text" class="validate">
+            <label for="skill1">Skill 1:</label>
         </div>
-
-        <p>References:</p>
         <div class="input-field">
-            <input id="references-input" type="text" class="validate">
-            <label for="references">Edit References:</label>
+            <input id="relevant-skill2" type="text" class="validate">
+            <label for="skill2">Skill 2:</label>
         </div>
+        <div class="input-field">
+            <input id="relevant-skill3" type="text" class="validate">
+            <label for="skill3">Skill 3:</label>
+        </div>
+        <a class="button-opacity btn tooltipped red" data-position="right"
+            data-tooltip="TIP: Identify your best skills and strengths relevant to the job.">?</a>
+        <a class="button-opacity btn tooltipped" data-position="right"
+            data-tooltip="'Programming languages such as: Python, Javascript, and HTML5.'">EX: 1</a>
+        <a class="button-opacity btn tooltipped" data-position="right"
+            data-tooltip="'Effective communication skills from 5+ years of customer service.'">EX: 2</a>
     </div>
-        <div class="card-action">
-          <button class="btn cyan darken-4" id="finishBtn">Update and Save Information</button>
-        </div>
+    <br>
+    <div class="card-action">
+        <button class="btn cyan darken-4" id="finishBtn">Update and Save Information</button>
+    </div>
 </div>
