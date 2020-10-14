@@ -10,8 +10,18 @@ form.login {
 
 #nav-logo-image{
   height: 60%;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 10px;
+}
+
+.card-image{
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+#my-info-title{
+  font-weight: 500;
 }
 
 body{
