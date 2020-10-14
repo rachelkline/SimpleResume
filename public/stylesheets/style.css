@@ -2,3 +2,19 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#nav-title{
+  font-family: 'Tauri', sans-serif;
+  margin-left: 10px;
+}
+
+#nav-logo-image{
+  height: 60%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+body{
+  background-image: url("../images/shattered.png");
+  }
+
