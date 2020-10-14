@@ -2,3 +2,32 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#nav-title{
+  font-family: 'Tauri', sans-serif;
+  margin-left: 10px;
+}
+
+#nav-logo-image{
+  height: 60%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.card-image{
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+#my-info-title{
+  font-weight: 500;
+}
+
+body{
+  background-image: url("../images/shattered.png");
+  }
+
+  .button-opacity{
+    opacity: 0.5;
+  }
