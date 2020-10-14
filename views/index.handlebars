@@ -1,0 +1,31 @@
+  <nav>
+    <div class="nav-wrapper indigo">
+      <a href="#" class="brand-logo">Simple Resume Generator</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="" href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      {{!-- <div class="col"> --}}
+        <h2>Welcome <span class="member-name"></span></h2>
+      {{!-- </div> --}}
+      <div class="row">
+        <div class="col s6">
+        <div id="userinfo">
+        {{> userInfo }}
+        </div>
+         </div> 
+        <div id="addUserinfo">
+        {{> addUserInfo }}
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+
