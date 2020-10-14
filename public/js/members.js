@@ -14,7 +14,9 @@ $(document).ready(() => {
   $("#finishBtn").on("click", function() {
     $("#addUserinfo").hide();
     $("#userinfo").show();
-  })
+  });
+  
 });
+
 
 
