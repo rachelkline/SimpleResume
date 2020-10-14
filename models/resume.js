@@ -1,10 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     //job title, professional summary, education, 3 skills
     const Resume = sequelize.define("Resume", {
-        jobTitle: {
-            type: DataTypes.TEXT,
-            allowNull:false
-        },
         professionalSummary: {
              type:DataTypes.TEXT,
              allowNull:false
