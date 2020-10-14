@@ -1,6 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
     const Resume = sequelize.define("Resume", {
-
         education: {
             type: DataTypes.TEXT,
             allowNull: false

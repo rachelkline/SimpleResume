@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const jobHistory1 = sequelize.define("jobHistory1", {
+    const jobHistory = sequelize.define("jobHistory", {
         jobTitle: {
             type: DataTypes.TEXT
         },
@@ -10,12 +10,13 @@ module.exports = function (sequelize, DataTypes) {
         location: {
             type: DataTypes.TEXT
         },
-        employmentDate: {
+        employmentDates: {
             type: DataTypes.TEXT
         },
         responsibilities: {
             type: DataTypes.TEXT
         }
+
     });
-    return jobHistory1;
+    return jobHistory;
 };
