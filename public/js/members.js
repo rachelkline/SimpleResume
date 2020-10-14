@@ -54,8 +54,6 @@ $(document).ready(() => {
   //tool tips
   $(".tooltipped").tooltip();
 
-
-
 });
 
 
