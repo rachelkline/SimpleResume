@@ -43,7 +43,19 @@ $(document).ready(() => {
     $("#userinfo").show();
     $("#generateResumeBtn").show();
     $("#editJobinfo").hide();
-  })
+  });
+
+  //When the 'generate resume' button is clicked...
+  $("#generateResumeBtn").on("click", function() {
+    //send the user to the 'generate resume' page
+    window.location.replace("/generate");
+  });
+
+  //tool tips
+  $(".tooltipped").tooltip();
+
+
+
 });
 
 
