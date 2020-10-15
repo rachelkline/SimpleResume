@@ -43,6 +43,7 @@ $(document).ready(() => {
     $("#userinfo").show();
     $("#generateResumeBtn").show();
     $("#editJobinfo").hide();
+
   });
 
   //When the 'generate resume' button is clicked...
