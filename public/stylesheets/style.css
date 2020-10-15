@@ -2,3 +2,43 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#nav-title{
+  font-family: 'Lobster', cursive;
+  margin-left: 15px;
+}
+
+#nav-logo-image{
+  height: 70%;
+  margin-left: 20px;
+  vertical-align: middle;
+  margin-bottom: 6px;
+}
+
+.card-image{
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+#my-info-title{
+  font-weight: 500;
+}
+
+body{
+  background-image: url("../images/shattered.png");
+  }
+
+.button-opacity{
+    opacity: 0.5;
+  }
+
+#job-history-title{
+  color: black;
+  font-weight: 500;
+}
+
+.ttbutton{
+  float: right;
+  margin-left: 4px;
+}

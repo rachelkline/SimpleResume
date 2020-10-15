@@ -5,16 +5,59 @@ $(document).ready(() => {
     $(".member-name").text(data.firstName);
   });
 
+  //When the page is loaded, hide the edit information forums
   $("#addUserinfo").hide();
+  $("#editJobinfo").hide();
+
+  //When the edit information button is clicked...
   $("#editBtn").on("click", function() {
+    //Hide user info, job history, & 'generate resume' button and display the 'edit user information' handlebars card
       $("#userinfo").hide();
+      $("#jobHist").hide();
+      $("#generateResumeBtn").hide();
       $("#addUserinfo").show();
   });
 
+  //When the 'finish editing' button is clicked...
   $("#finishBtn").on("click", function() {
+    //hide the 'edit' text box and return to the normal dashboard page
     $("#addUserinfo").hide();
+    $("#jobHist").show();
     $("#userinfo").show();
-  })
+    $("#generateResumeBtn").show();
+  });
+
+  //When the 'edit job history' button is clicked...
+  $("#editJobBtn").on("click", function() {
+      //Hide user info, job history, & 'generate resume' button and display the 'edit job history' handlebars card
+    $("#jobHist").hide();
+    $("#userinfo").hide();
+    $("#generateResumeBtn").hide();
+    $("#editJobinfo").show();
+  });
+
+  //When the 'finish editing' button is clicked...
+  $("#finishJobBtn").on("click", function() {
+      //hide the 'edit' text box and return to the normal dashboard page
+    $("#jobHist").show();
+    $("#userinfo").show();
+    $("#generateResumeBtn").show();
+    $("#editJobinfo").hide();
+  });
+
+  //When the 'generate resume' button is clicked...
+  $("#generateResumeBtn").on("click", function() {
+    //send the user to the 'generate resume' page
+    window.location.replace("/generate");
+  });
+
+  //tool tips
+  $(".tooltipped").tooltip();
+
+  // drop down navbar
+  $(".dropdown-trigger").dropdown();
+
 });
+
 
 
