@@ -1,7 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "thiPPu8!op",
+    "password": "coding20",
+=======
+    "password": "thiPPu8!op"
     "database": "users_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
