@@ -31,3 +31,53 @@ body{
   .button-opacity{
     opacity: 0.5;
   }
+
+  /* resume template styling */
+#resumeTemplate {
+    padding: 15px;
+    width: 21cm;
+    height: 29cm;
+}
+.jobTitle {
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.dOfEmp {
+  padding-bottom: 17px;
+}
+#titleName {
+  padding-top: 30px;
+  font-size: 65px;
+}
+#jDuties {
+  padding-bottom: 30px;
+}
+#resName {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.res-title {
+  padding-top: 20px;
+}
+
+.resHR {
+  margin-top: 30px;
+}
+
+#profSum {
+  padding-bottom: 10px;
+}
+.titleHR {
+  border: 3px solid;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  width: 35px;
+  text-align: left;
+}
+
+.skillsList {
+  padding-bottom: 15px;
+}
+
