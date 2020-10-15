@@ -1,22 +1,37 @@
 module.exports = function (sequelize, DataTypes) {
     const jobHistory = sequelize.define("jobHistory", {
-        jobTitle: {
+        jobTitleOne: {
             type: DataTypes.TEXT
         },
-        employer: {
+        employerNameOne: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        location: {
+        locationOne: {
             type: DataTypes.TEXT
         },
-        employmentDates: {
+        employmentDatesOne: {
             type: DataTypes.TEXT
         },
-        responsibilities: {
+        responsibilitiesOne: {
+            type: DataTypes.TEXT
+        },
+        jobTitleTwo: {
+            type: DataTypes.TEXT
+        },
+        employerNameTwo: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        locationTwo: {
+            type: DataTypes.TEXT
+        },
+        employmentDatesTwo: {
+            type: DataTypes.TEXT
+        },
+        responsibilitiesTwo: {
             type: DataTypes.TEXT
         }
-
     });
     return jobHistory;
 };
