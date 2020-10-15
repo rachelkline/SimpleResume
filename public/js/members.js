@@ -54,6 +54,9 @@ $(document).ready(() => {
   //tool tips
   $(".tooltipped").tooltip();
 
+  // drop down navbar
+  $(".dropdown-trigger").dropdown();
+
 });
 
 
