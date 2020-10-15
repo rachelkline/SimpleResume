@@ -18,7 +18,8 @@ module.exports = function(sequelize, DataTypes) {
             allowNull:false
         },
         relevantSkills3: {
-            type: DataTypes.TEXT
+            type: DataTypes.TEXT,
+            allowNull:false
         },
     });
     return Resume;

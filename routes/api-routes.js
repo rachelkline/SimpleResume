@@ -54,5 +54,13 @@ module.exports = function(app) {
       });
     }
   });
-  app.get("api/resume")
-};
+  //Route for posting resume data
+  app.post("api/Resume",(req,res)=>{
+    db.Resume.create(req.body).then(resumeData=>{
+      res.json({data:resumeData})
+    }).catch(err=>{
+      res.json({err:err})
+    })
+  })
+
+ };
