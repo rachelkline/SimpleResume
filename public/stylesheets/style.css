@@ -4,14 +4,15 @@ form.login {
 }
 
 #nav-title{
-  font-family: 'Tauri', sans-serif;
-  margin-left: 10px;
+  font-family: 'Lobster', cursive;
+  margin-left: 15px;
 }
 
 #nav-logo-image{
-  height: 60%;
+  height: 70%;
   margin-left: 20px;
-  margin-top: 10px;
+  vertical-align: middle;
+  margin-bottom: 6px;
 }
 
 .card-image{
@@ -28,9 +29,10 @@ body{
   background-image: url("../images/shattered.png");
   }
 
-  .button-opacity{
+.button-opacity{
     opacity: 0.5;
   }
+
 
   /* resume template styling */
 #resumeTemplate {
@@ -81,3 +83,13 @@ body{
   padding-bottom: 15px;
 }
 
+=======
+#job-history-title{
+  color: black;
+  font-weight: 500;
+}
+
+.ttbutton{
+  float: right;
+  margin-left: 4px;
+}
