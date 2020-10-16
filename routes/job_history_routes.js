@@ -7,7 +7,7 @@ module.exports = (app) => {
     app.post("/api/jobhistory", (req, res) => {
         db.jobHistory.findOne({
             where: {
-                id: 1
+                id: req.user.id
             }
         }).then (item =>{
             if(!item) {
@@ -18,23 +18,22 @@ module.exports = (app) => {
             } else {
                 db.jobHistory.update(req.body, {
                     where: {
-                        id: 1
+                        id: req.user.id
                     }
                 }).then(function(dbJob){
                     res.json(dbJob)
                 })
             }
         })
-            // jobOneTitle: req.body.jobOneTitle,
-            // employerOne: req.body.employerOne,
-            // employmentOneDates: req.body.employmentOneDates,
-            // responsibilitiesOne: req.body.responsibilitiesOne,
-            // jobTwoTitle: req.body.jobTwoTitle,
-            // employerTwo: req.body.employerTwo,
-            // employmentTwoDates: req.body.employmentTwoDates,
-            // responsibilitiesTwo: req.body.responsibilitiesTwo,
             
     })
+    app.get("/api/jobhistory", (req, res) =>{
+        db.jobHistory.findAll({}).then(function(jobHist){
+            res.json(jobHist);
+               
+        });
+         
+    });
     
 }
 
