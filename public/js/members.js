@@ -117,6 +117,17 @@ $(document).ready(() => {
     console.log(jobHist[0]);
   })
 
+  $.get("/api/resume").then(resumeInfo => {
+    $("#sought-prof").text(`${resumeInfo[0].jobSeeking}`);
+    $("#profSumm").text(`${resumeInfo[0].professionalSummary}`);
+    $("#education").text(`${resumeInfo[0].education}`);
+    $("#skill1").text(`${resumeInfo[0].relevantSkills1}`);
+    $("#skill2").text(`${resumeInfo[0].relevantSkills2}`);
+    $("#skill3").text(`${resumeInfo[0].relevantSkills3}`);
+    
+    console.log(resumeInfo[0]);
+  })
+
 });
 
 

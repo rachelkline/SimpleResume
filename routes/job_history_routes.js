@@ -11,7 +11,9 @@ module.exports = (app) => {
             }
         }).then(item => {
             if (!item) {
-                db.jobHistory.create(req.body).then(function (dbJob) {
+                let newJob = req.body;
+                newJob.UserId=req.user.id;
+                db.jobHistory.create(newJob).then(function (dbJob) {
                     res.json(dbJob)
                     return
                 })
