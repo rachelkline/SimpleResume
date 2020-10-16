@@ -7,7 +7,7 @@ $(document).ready(() => {
     };
 
     $('#saveResumeBtn').click(function () {
-        doc.fromHTML($('#content').html(), 15, 15, {
+        doc.fromHTML($('#resumeTemplate').html(), 15, 15, {
             'width': 170,
             'elementHandlers': specialElementHandlers
         });
