@@ -9,9 +9,9 @@ module.exports = (app) => {
             where: {
                 id: 1
             }
-        }).then (item =>{
-            if(!item) {
-                db.jobHistory.create(req.body).then(function(dbJob){
+        }).then(item => {
+            if (!item) {
+                db.jobHistory.create(req.body).then(function (dbJob) {
                     res.json(dbJob)
                     return
                 })
@@ -20,21 +20,21 @@ module.exports = (app) => {
                     where: {
                         id: 1
                     }
-                }).then(function(dbJob){
+                }).then(function (dbJob) {
                     res.json(dbJob)
                 })
             }
         })
-            // jobOneTitle: req.body.jobOneTitle,
-            // employerOne: req.body.employerOne,
-            // employmentOneDates: req.body.employmentOneDates,
-            // responsibilitiesOne: req.body.responsibilitiesOne,
-            // jobTwoTitle: req.body.jobTwoTitle,
-            // employerTwo: req.body.employerTwo,
-            // employmentTwoDates: req.body.employmentTwoDates,
-            // responsibilitiesTwo: req.body.responsibilitiesTwo,
-            
+        // jobOneTitle: req.body.jobOneTitle,
+        // employerOne: req.body.employerOne,
+        // employmentOneDates: req.body.employmentOneDates,
+        // responsibilitiesOne: req.body.responsibilitiesOne,
+        // jobTwoTitle: req.body.jobTwoTitle,
+        // employerTwo: req.body.employerTwo,
+        // employmentTwoDates: req.body.employmentTwoDates,
+        // responsibilitiesTwo: req.body.responsibilitiesTwo,
+
     })
-    
+
 }
 
