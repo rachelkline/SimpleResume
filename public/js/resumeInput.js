@@ -1,14 +1,15 @@
 $(document).ready(() => {
     // Getting references to our inputs
-    const myInformation = $("div#Information");
+    const myInformation = $("button#finishBtn");
     const professionalSummaryInput = $("input#prof-summary");
     const educationInput = $("input#education-input");
     const skillInput1 = $("input#relevant-skill1");
     const skillInput2 = $("input#relevant-skill2");
     const skillInput3 = $("input#relevant-skill3");
 
-    myInformation.on("#finishBtn", event => {
+    myInformation.on("click", event => {
         event.preventDefault();
+        console.log("click")
         const userData = {
             professionalSummary: professionalSummaryInput.val().trim(),
             education: educationInput.val().trim(),
@@ -23,24 +24,27 @@ $(document).ready(() => {
         }
 
         addUserInfo(userData.professionalSummary, userData.education, userData.relevantSkills1, userData.relevantSkills2, userData.relevantSkills3);
-        professionalSummaryInput.val("");
-        educationInput.val("");
-        skillInput1.val("");
-        skillInput2.val("");
-        skillInput3.val("");
+
 
         function addUserInfo() {
-            const data = [];
+            // const data = [];
             const resume = {
-                url: "/api/Resume",
+                url: "/api/resume",
                 method: "POST",
                 header: {
                     "Content-Type": "application/json",
                 },
+                data:userData
             };
-            data.push(resume)
+            // data.push(resume)
             $.ajax(resume).done(function (response) {
                 console.log(response);
+                professionalSummaryInput.val("");
+                educationInput.val("");
+                skillInput1.val("");
+                skillInput2.val("");
+                skillInput3.val("");
+                
             });
         }
     });

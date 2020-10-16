@@ -43,6 +43,7 @@ $(document).ready(() => {
     $("#userinfo").show();
     $("#generateResumeBtn").show();
     $("#editJobinfo").hide();
+
   });
 
   //When the 'generate resume' button is clicked...
@@ -53,6 +54,9 @@ $(document).ready(() => {
 
   //tool tips
   $(".tooltipped").tooltip();
+
+  // drop down navbar
+  $(".dropdown-trigger").dropdown();
 
 });
 
