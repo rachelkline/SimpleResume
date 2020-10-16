@@ -26,7 +26,6 @@ module.exports = function (sequelize, DataTypes) {
         responsibilitiesTwo: {
             type: DataTypes.TEXT
         }
-
     });
     jobHistory.associate = function(models) {
         // We're saying that a jobHistory should belong to an Author

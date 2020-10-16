@@ -9,9 +9,9 @@ module.exports = (app) => {
             where: {
                 id: req.user.id
             }
-        }).then (item =>{
-            if(!item) {
-                db.jobHistory.create(req.body).then(function(dbJob){
+        }).then(item => {
+            if (!item) {
+                db.jobHistory.create(req.body).then(function (dbJob) {
                     res.json(dbJob)
                     return
                 })
@@ -20,7 +20,7 @@ module.exports = (app) => {
                     where: {
                         id: req.user.id
                     }
-                }).then(function(dbJob){
+                }).then(function (dbJob) {
                     res.json(dbJob)
                 })
             }

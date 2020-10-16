@@ -1,21 +1,26 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
+    //job title, professional summary, education, 3 skills
     const Resume = sequelize.define("Resume", {
+        professionalSummary: {
+             type:DataTypes.TEXT,
+             allowNull:false
+        },
         education: {
             type: DataTypes.TEXT,
             allowNull: false
         },
-        jobHist1: {
-            type: DataTypes.TEXT
+        relevantSkills1: {
+            type: DataTypes.TEXT,
+            allowNull:false
         },
-        jobHist2: {
-            type: DataTypes.TEXT
+        relevantSkills2: {
+            type: DataTypes.TEXT,
+            allowNull:false
         },
-        relevantSkills: {
-            type: DataTypes.TEXT
+        relevantSkills3: {
+            type: DataTypes.TEXT,
+            allowNull:false
         },
-        reference: {
-            type: DataTypes.TEXT
-        }
     });
 
     Resume.associate = function(models) {
