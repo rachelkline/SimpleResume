@@ -31,9 +31,17 @@ module.exports = function (app) {
 
   //If a user who is not logged in tries to access this route they will be redirected to the signp page
   app.get("/generate", isAuthenticated, (req, res) => {
-    res.render("generateResume");
-    // send an object across 
-    // talk to it through handlebars
+    db.User.findOne({
+      where:{
+        id: req.user.id
+      }
+      }).then(function(userData){
+         res.render("generateResume", {userData}
+
+      );
+      })
+     
+
   })
 
   // Here we've add our isAuthenticated middleware to this route.

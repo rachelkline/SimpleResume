@@ -3,7 +3,9 @@ $(document).ready(() => {
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.firstName);
+    console.log(data.firstName);
   });
+
 
   //When the page is loaded, hide the edit information forums
   $("#addUserinfo").hide();
@@ -70,8 +72,6 @@ $(document).ready(() => {
   const employerTwoInput = $("input#employer2");
   const jobTwoDutiesInput = $("input#job2-duties");
   
-    // When the signup button is clicked, we validate the email and password are not blank
-
     
   $("#finishJobBtn").on("click", event => {
     event.preventDefault();
@@ -87,13 +87,9 @@ $(document).ready(() => {
     };
     console.log(userData);
 
-    // If we have an email and password, run the signUpUser function
     storeJobInput(userData.jobOneTitle, userData.employerOne, userData.employmentOneDates, userData.responsibilitiesOne, userData.jobTwoTitle, userData.employerTwo, userData.employmentTwoDates, userData.responsibilitiesTwo);
   });
 
-  
-  // Does a post to the signup route. If successful, we are redirected to the members page
-  // Otherwise we log any errors
   function storeJobInput(jobOneTitle, employerOne, employmentOneDates, responsibilitiesOne, jobTwoTitle, employerTwo, employmentTwoDates, responsibilitiesTwo) {
     $.post("/api/jobhistory", {
       jobOneTitle: jobOneTitle,
@@ -107,9 +103,19 @@ $(document).ready(() => {
     })
       .then(() => {
         window.location.replace("/members");
-      //   // If there's an error, handle it by throwing up a bootstrap alert
       })
   }
+  $.get("/api/jobhistory").then(jobHist => {
+    $("#jtitleOne").text(`${jobHist[0].jobOneTitle}`);
+    $("#datesOne").text(`${jobHist[0].employmentOneDates}`);
+    $("#employOne").text(`${jobHist[0].employerOne}`);
+    $("#jDutiesOne").text(`${jobHist[0].responsibilitiesOne}`);
+    $("#jtitleTwo").text(`${jobHist[0].jobTwoTitle}`);
+    $("#datesTwo").text(`${jobHist[0].employmentTwoDates}`);
+    $("#employTwo").text(`${jobHist[0].employerTwo}`);
+    $("#jDutiesTwo").text(`${jobHist[0].responsibilitiesTwo}`);
+    console.log(jobHist[0]);
+  })
 
 });
 
