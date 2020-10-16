@@ -31,17 +31,20 @@ module.exports = function (app) {
 
   //If a user who is not logged in tries to access this route they will be redirected to the signp page
   app.get("/generate", isAuthenticated, (req, res) => {
-    db.User.findOne({
-      where:{
-        id: req.user.id
-      }
-      }).then(function(userData){
-         res.render("generateResume", {userData}
+    // db.User.findOne({
+    //   where:{
+    //     id: req.user.id
+    //   }
+    //   }).then(function(userData){
+    //      res.render("generateResume", {userData}
 
-      );
-      })
+    //   );
+    //   })
      
 
+    res.render("generateResume");
+    // send an object across 
+    // talk to it through handlebars
   })
 
   // Here we've add our isAuthenticated middleware to this route.

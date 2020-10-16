@@ -45,7 +45,37 @@
     $(".dropdown-trigger").dropdown();
   });
 
-</script>
+  $.get("/api/jobhistory").then(jobHist => {
+        $("#jtitleOne").text(`${jobHist[0].jobOneTitle}`);
+        $("#datesOne").text(`${jobHist[0].employmentOneDates}`);
+        $("#employOne").text(`${jobHist[0].employerOne}`);
+        $("#jDutiesOne").text(`${jobHist[0].responsibilitiesOne}`);
+        $("#jtitleTwo").text(`${jobHist[0].jobTwoTitle}`);
+        $("#datesTwo").text(`${jobHist[0].employmentTwoDates}`);
+        $("#employTwo").text(`${jobHist[0].employerTwo}`);
+        $("#jDutiesTwo").text(`${jobHist[0].responsibilitiesTwo}`);
+        console.log(jobHist[0]);
+      })
 
+    $.get("/api/resume").then(resumeInfo => {
+        $("#resName").text(` ${resumeInfo[0].jobSeeking}`);
+        $("#profSumm").text(`${resumeInfo[0].professionalSummary}`);
+        $("#education").text(`${resumeInfo[0].education}`);
+        $("#skill1").text(`${resumeInfo[0].relevantSkills1}`);
+        $("#skill2").text(`${resumeInfo[0].relevantSkills2}`);
+        $("#skill3").text(`${resumeInfo[0].relevantSkills3}`);
+        
+        console.log(resumeInfo[0]);
+      })
+
+    $.get("/api/user_data").then(userInfo => {
+      $("#userEmail").text(` ${userInfo.email}`);
+      $("#location").text(` ${userInfo.location}`);
+      $("#firstName").text(` ${userInfo.firstName}`);
+      $("#lastName").text(` ${userInfo.lastName}`);
+      console.log(userInfo);
+    })
+
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
 <script src="js/pdf.js"></script>

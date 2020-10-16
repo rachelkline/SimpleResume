@@ -49,20 +49,54 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         firstName: req.user.firstName,
+        lastName: req.user.lastName,
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        location: req.user.location
       });
     }
   });
   //Route for posting resume data
-  app.post("/api/resume",(req,res)=>{
-    console.log("message")
-    console.log(req.body)
-    db.Resume.create(req.body).then(resumeData=>{
-      res.json({data:resumeData})
-    }).catch(err=>{
-      res.json({err:err})
-    })
-  })
+  // app.post("/api/resume",(req,res)=>{
+  //   console.log("message")
+  //   console.log(req.body)
+  //   db.Resume.create(req.body).then(resumeData=>{
+  //     res.json({data:resumeData})
+  //   }).catch(err=>{
+  //     res.json({err:err})
+  //   })
+  // })
 
- };
+  app.post("/api/resume", (req, res) => {
+    db.jobHistory.findOne({
+        where: {
+            id: req.user.id
+        }
+    }).then(item => {
+        if (!item) {
+            let newResume = req.body;
+            newResume.UserId=req.user.id;
+            db.Resume.create(newResume).then(function (dbResume) {
+                res.json(dbResume)
+                return
+            })
+        } else {
+            db.Resume.update(req.body, {
+                where: {
+                    id: req.user.id
+                }
+            }).then(function (dbResume) {
+                res.json(dbResume)
+            })
+        }
+    })
+        
+  })
+  app.get("/api/resume", (req, res) =>{
+      db.Resume.findAll({}).then(function(resumeData){
+          res.json(resumeData);
+            
+      });
+  });
+
+};
