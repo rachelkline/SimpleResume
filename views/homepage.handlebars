@@ -17,14 +17,34 @@
 </nav>
 
 <div class="parallax-container">
-    <div class="parallax"><img src="../public/images/andrew-neel-cckf4TsHAuw-unsplash.jpg"></div>
+    <div class="parallax"><img src="/images/andrew-neel-cckf4TsHAuw-unsplash.jpg"></div>
 </div>
 <div class="section white">
     <div class="row container">
-    <h2 class="header">Parallax</h2>
-    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    <h2 id="homeHeader" class="header">Simple Resume</h2>
+    <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum eaque earum odio enim blanditiis consequuntur necessitatibus quam, autem eos illo dolor voluptatum at pariatur suscipit sequi laudantium, ex libero in!</p>
+    <div class="col s2">
+    <button id="signUpBtn" type="submit" class="btn cyan darken-4 waves-effect waves-red">Sign Up</button>
+    </div>
+    <div class="col s2">
+    <button id="logInBtn" type="submit" class="btn cyan darken-4 waves-effect waves-red">Log In</button>
+    </div>
     </div>
 </div>
 <div class="parallax-container">
-    <div class="parallax"><img src="../public/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg"></div>
+    <div class="parallax"><img src="/images/marten-bjork-6dW3xyQvcYE-unsplash.jpg"></div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(() => {
+    $('.parallax').parallax();
+  });
+
+  $("#signUpBtn").on("click", function() {
+    window.location.replace("/signup");
+  });
+
+  $("#logInBtn").on("click", function() {
+    window.location.replace("/login");
+  });
+</script>

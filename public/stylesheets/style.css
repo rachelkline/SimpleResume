@@ -8,6 +8,10 @@ form.login {
   margin-left: 15px;
 }
 
+#homeHeader{
+  font-family: 'Lobster', cursive;
+}
+
 #nav-logo-image{
   height: 70%;
   margin-left: 20px;
@@ -27,7 +31,7 @@ form.login {
 
 body{
   background-image: url("../images/shattered.png");
-  }
+}
 
 .button-opacity{
     opacity: 0.5;
