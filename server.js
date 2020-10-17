@@ -35,7 +35,7 @@ require("./routes/job_history_routes")(app);
 
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({force:false}).then(() => {
+db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
