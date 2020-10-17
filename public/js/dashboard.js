@@ -51,12 +51,12 @@ $(document).ready(() => {
 
 
   const editResume = $("#finishBtn");
-  const soughtJob = $("input#sought-prof");
-  const professionalSummary = $("input#prof-summary");
-  const education = $("input#education-input");
-  const relevantSkills1 = $("input#relevant-skill1");
-  const relevantSkills2 = $("input#relevant-skill2");
-  const relevantSkills3 = $("input#relevant-skill3");
+  const soughtJob = $("input#sought-prof-val");
+  const professionalSummary = $("input#prof-summary-val");
+  const education = $("input#education-val");
+  const relevantSkills1 = $("input#skill1-val");
+  const relevantSkills2 = $("input#skill2-val");
+  const relevantSkills3 = $("input#skill3-val");
  
 
   // When the signup button is clicked, we validate the email and password are not blank

@@ -106,27 +106,41 @@ $(document).ready(() => {
       })
   }
   $.get("/api/jobhistory").then(jobHist => {
-    $("#jtitleOne").text(`${jobHist[0].jobOneTitle}`);
-    $("#datesOne").text(`${jobHist[0].employmentOneDates}`);
-    $("#employOne").text(`${jobHist[0].employerOne}`);
-    $("#jDutiesOne").text(`${jobHist[0].responsibilitiesOne}`);
-    $("#jtitleTwo").text(`${jobHist[0].jobTwoTitle}`);
-    $("#datesTwo").text(`${jobHist[0].employmentTwoDates}`);
-    $("#employTwo").text(`${jobHist[0].employerTwo}`);
-    $("#jDutiesTwo").text(`${jobHist[0].responsibilitiesTwo}`);
+    $("#jtitleOne").text(` ${jobHist[0].jobOneTitle}`);
+    $("#job1-title").val(`${jobHist[0].jobOneTitle}`);
+    $("#datesOne").text(` ${jobHist[0].employmentOneDates}`);
+    $("#employment1-dates").val(`${jobHist[0].employmentOneDates}`);
+    $("#employOne").text(` ${jobHist[0].employerOne}`);
+    $("#employer1").val(`${jobHist[0].employerOne}`);
+    $("#jDutiesOne").text(` ${jobHist[0].responsibilitiesOne}`);
+    $("#job1-duties").val(`${jobHist[0].responsibilitiesOne}`);
+    $("#jtitleTwo").text(` ${jobHist[0].jobTwoTitle}`);
+    $("#job2-title").val(`${jobHist[0].jobTwoTitle}`);
+    $("#datesTwo").text(` ${jobHist[0].employmentTwoDates}`);
+    $("#employment2-dates").val(`${jobHist[0].employmentTwoDates}`);
+    $("#employTwo").text(` ${jobHist[0].employerTwo}`);
+    $("#employer2").val(`${jobHist[0].employerTwo}`);
+    $("#jDutiesTwo").text(` ${jobHist[0].responsibilitiesTwo}`);
+    $("#job2-duties").val(`${jobHist[0].responsibilitiesTwo}`);
     console.log(jobHist[0]);
   })
 
   $.get("/api/resume").then(resumeInfo => {
-    $("#sought-prof").text(`${resumeInfo[0].jobSeeking}`);
-    $("#profSumm").text(`${resumeInfo[0].professionalSummary}`);
-    $("#education").text(`${resumeInfo[0].education}`);
-    $("#skill1").text(`${resumeInfo[0].relevantSkills1}`);
-    $("#skill2").text(`${resumeInfo[0].relevantSkills2}`);
-    $("#skill3").text(`${resumeInfo[0].relevantSkills3}`);
-    
+    $("#sought-prof").text(` ${resumeInfo[0].jobSeeking}`);
+    $("#sought-prof-val").val(`${resumeInfo[0].jobSeeking}`)
+    $("#profSumm").text(` ${resumeInfo[0].professionalSummary}`);
+    $("#prof-summary-val").val(`${resumeInfo[0].professionalSummary}`);
+    $("#education").text(` ${resumeInfo[0].education}`);
+    $("#education-val").val(`${resumeInfo[0].education}`);
+    $("#skill1").text(` ${resumeInfo[0].relevantSkills1}`);
+    $("#skill1-val").val(`${resumeInfo[0].relevantSkills1}`);
+    $("#skill2").text(` ${resumeInfo[0].relevantSkills2}`);
+    $("#skill2-val").val(`${resumeInfo[0].relevantSkills1}`);
+    $("#skill3").text(` ${resumeInfo[0].relevantSkills3}`);
+    $("#skill3-val").val(`${resumeInfo[0].relevantSkills1}`);
+    ;
     console.log(resumeInfo[0]);
-  })
+  });
 
 });
 
