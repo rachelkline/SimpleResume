@@ -104,9 +104,9 @@ To run this application:
 
   *For any questions about this application, please contact me via the information below:*
 
-  * **GitHub:** 
+  * **GitHub:** https://github.com/rachelkline
   
-  * **Email:** 
+  * **Email:** rachel_kline@icloud.com
 
 ---
   <br>
