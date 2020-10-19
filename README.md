@@ -8,6 +8,11 @@ https://group1-simple-resume.herokuapp.com/
 
 ---
 
+## Presentation Link:
+https://docs.google.com/presentation/d/14wVL5YBi8Is36Uu-Wq5ElcIvt8le_DOTVAKj5adIIpQ/edit?usp=sharing
+
+---
+
 ## Description
 
   *The what, why, and how:*
@@ -26,6 +31,7 @@ After users resumes are generated and ready for the market. Users can find jobs 
 ## Table of Contents
 
   - [Deployed Site](#deployed-site)
+  - [Presentation Link](#presentation-link)
   - [Description](#description)
   - [Usage](#usage)
   - [Directory Structure](#directory-structure)
