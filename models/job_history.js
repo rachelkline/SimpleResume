@@ -27,14 +27,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.TEXT
         }
     });
-    jobHistory.associate = function(models) {
+    jobHistory.associate = function (models) {
         // We're saying that a jobHistory should belong to an Author
         // A jobHistory can't be created without an Author due to the foreign key constraint
         jobHistory.belongsTo(models.User, {
-          foreignKey: {
-            allowNull: false
-          }
+            foreignKey: {
+                allowNull: false
+            }
         });
-      };
+    };
     return jobHistory;
 };
