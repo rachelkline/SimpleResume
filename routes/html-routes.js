@@ -17,7 +17,7 @@ module.exports = function (app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.render("signup");
+    res.render("signUp");
   });
 
   app.get("/login", (req, res) => {
@@ -40,7 +40,7 @@ module.exports = function (app) {
 
     //   );
     //   })
-     
+
 
     res.render("generateResume");
     // send an object across 
